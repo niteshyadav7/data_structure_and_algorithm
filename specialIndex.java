@@ -7,7 +7,7 @@ public class specialIndex {
    * indices such that removing an element from these indices makes the sum of
    * even-indexed and odd-indexed array elements equal.
    */
-  // Algorithm :
+  // Algorithm : Time And Space Complexity O(N)
   /**
    * firstly create the odd and even prefix sum
    * let i-th element removed then before i-th odd remains odd vice-versa for even
