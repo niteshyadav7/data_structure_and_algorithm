@@ -33,4 +33,14 @@ public class reverseAndRotation {
     }
   }
 
+  /**
+   * Problem Description
+   * Given an integer array A of size N and an integer B, you have to return the
+   * same array after rotating it B times towards the right.
+   */
+  public static void rotateArray(int A[], int B) {
+    reverse(A);
+    reverseArray(A, 0, B - 1);
+    reverseArray(A, B, A.length - 1);
+  }
 }
