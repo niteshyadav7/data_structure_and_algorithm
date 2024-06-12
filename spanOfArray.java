@@ -40,4 +40,27 @@ public class spanOfArray {
     }
     return ans;
   }
+
+  /**
+   * Problem Description
+   * Given an array A of N integers.
+   * Count the number of elements that have at least 1 elements greater than
+   * itself.
+   * 
+   * A = [3, 1, 2] 1 and 2 are less so ans is 2.
+   */
+  // Algorithm: find the number of maximum value then size-count..
+  public static int greaterItself(int A[]) {
+    int count = 0;
+    int max = Integer.MIN_VALUE;
+    for (int i = 0; i < A.length; i++) {
+      if (A[i] > max) {
+        max = A[i];
+        count = 1;
+      } else if (A[i] == max) {
+        count++;
+      }
+    }
+    return count;
+  }
 }
