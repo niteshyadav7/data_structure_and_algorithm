@@ -1,0 +1,81 @@
+import java.util.ArrayList;
+
+/**
+ * Prefix sum and suffix sum
+ * Carry Forward method
+ * Sliding Window
+ * Contribution method
+ * Kadanne method
+ */
+
+public class SubArray {
+
+  // List of Subarray Coding Problems
+
+  // 1. Find All Subarrays
+  // 2. Maximum Sum Subarray (Kadane’s Algorithm)
+  // 3. Maximum Product Subarray
+  // 4. Subarray Sum Equals K
+  // 5. Longest Subarray with Sum K
+  // 6. Subarray with Given Sum (Positive Numbers)
+  // 7. Count of Subarrays with Given XOR
+  // 8. Smallest Subarray with Sum Greater Than or Equal to K
+  // 9. Longest Subarray with Equal Number of 0s and 1s
+  // 10. Find Subarray with Maximum Average
+  // 11. Maximum Length of Repeated Subarray
+  // 12. Subarrays with Sum Divisible by K
+  // 13. Maximum Sum Circular Subarray
+  // 14. Subarray Product Less Than K
+  // 15. Sum of All Subarrays
+
+  // List of Substring Coding Problems
+
+  // 1. Find All Substrings
+  // 2. Longest Palindromic Substring
+  // 3. Longest Substring Without Repeating Characters
+  // 4. Longest Common Substring
+  // 5. Count and Print All Substrings
+  // 6. Count Distinct Substrings of a String
+  // 7. Count Substrings with Exactly K Distinct Characters
+  // 8. Longest Substring with At Most K Distinct Characters
+  // 9. Longest Repeating Substring
+  // 10. Smallest Substring Containing All Characters of Another String
+  // 11. Longest Substring with Equal Number of 0s, 1s, and 2s
+  // 12. Longest Substring with Same Letters after Replacement
+  // 13. Longest Substring with K Unique Characters
+  // 14. Shortest Substring with All Characters of a Given String
+  // 15. Longest Substring with At Most Two Distinct Characters
+  // 16. Longest Substring with At Least K Repeating Characters
+  // 17. Count Substrings That Differ by One Character
+  // 18. Find Substring with Concatenation of All Words
+  // 19. Check if a Substring is Present in a String
+  // 20. Find All Anagram Substrings
+
+  /**
+   * Problem Description
+   * You are given an array A of N integers.
+   * Return a 2D array consisting of all the subarrays of the array
+   * 
+   * Note : The order of the subarrays in the resulting 2D array does not matter.
+   */
+  // Algorithm I:Time Complexity : O(N^3) And Space Complexity : O(N)
+  /**
+   * generate the subarray from start to end index
+   * then find the start and end indexes.
+   */
+  public static ArrayList<ArrayList<Integer>> allSubArrays(int A[]) {
+    ArrayList<ArrayList<Integer>> list = new ArrayList<>();
+    for (int start = 0; start < A.length; start++) {
+      for (int end = start; end < A.length; end++) {
+        ArrayList<Integer> ans = new ArrayList<>();
+        for (int k = start; k <= end; k++) {
+          ans.add(A[k]);
+        }
+        list.add(ans);
+      }
+    }
+    return list;
+
+  }
+
+}
