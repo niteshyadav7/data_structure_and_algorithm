@@ -6,6 +6,7 @@ Complete DSA
 
 - Equlibrium Array
 - Stocks sell and buy
+- Print the Anit-diagoanl
 
 # Note :
 
