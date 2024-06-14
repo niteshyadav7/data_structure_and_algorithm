@@ -75,7 +75,115 @@ public class SubArray {
       }
     }
     return list;
-
   }
 
+  //
+  /**
+   * Problem Description
+   * You are given an integer array C of size A. Now you need to find a subarray
+   * (contiguous elements) so that the sum of contiguous elements is maximum.
+   * But the sum must not exceed B.
+   */
+
+  // Algorithm I: Approach I:Time Complexity O(N^3) And
+  /***
+   * first find the start and end then
+   * iterate over the the array k=i;k<=j;k++
+   * then find the sum of every subarray And check
+   * if sum<=B then return max(ans,sum)
+   * 
+   * @param A
+   * @return
+   */
+  public static int subarraySumBrute(int A[], int B) {
+    int ans = 0;
+    for (int start = 0; start < A.length; start++) {
+      for (int end = start; end < A.length; end++) {
+        int sum = 0;
+        for (int k = start; k <= end; k++) {
+          sum += A[k];
+        }
+        if (sum <= B) {
+          ans = Math.max(ans, sum);
+        }
+      }
+    }
+    return ans;
+  }
+
+  // Approach II: Time compexity O(N^2)
+  /**
+   * sum find the using the carry forward
+   * 
+   */
+  public static int subarraySumCF(int A[], int B) {
+    int ans = 0;
+    for (int i = 0; i < A.length; i++) {
+      int sum = 0;
+      for (int j = i; j < A.length; j++) {
+        sum += A[j];
+      }
+      if (sum <= B) {
+        ans = Math.max(ans, sum);
+      }
+    }
+    return ans;
+  }
+
+  /**
+   * Problem Description
+   * You are given an integer array A of length N.
+   * You have to find the sum of all subarray sums of A.
+   * More formally, a subarray is defined as a contiguous part of an array which
+   * we can obtain by deleting zero or more elements from either end of the array.
+   * A subarray sum denotes the sum of all the elements of that subarray.
+   * 
+   * Note : Be careful of integer overflow issues while calculations. Use
+   * appropriate datatypes.
+   */
+  // Algorithm I: Time complexity O(N) And Space Complexity O(1).
+  /**
+   * Using contribution technique
+   * find how many times an particular elements appear
+   * contribution=(i+1)*(n-i)
+   */
+  public static int allSubArraySum(int A[]) {
+    int ans = 0;
+    for (int i = 0; i < A.length; i++) {
+      int contr = (i + 1) * (A.length - i);
+      ans += A[i] * contr;
+    }
+    return ans;
+  }
+
+  /**
+   * Problem Description
+   * Given an array A of length N. Also given are integers B and C.
+   * Return 1 if there exists a subarray with length B having sum C and 0
+   * otherwise
+   * 
+   * A = [4, 3, 2, 6, 1]
+   * B = 3
+   * C = 11
+   */
+  // Sliding Window Technique
+  public static boolean slidingSubArrayExist(int A[], int B, int C) {
+    // A-> for arrays
+    // B-> window length
+    // C-> sum exist
+    int initailSum = 0;
+    for (int i = 0; i < B; i++) {
+      initailSum += A[i];
+    }
+    int windowSum = initailSum;
+    int l = 1, h = B;
+    while (h < A.length) {
+      windowSum = windowSum + A[h] - A[l - 1];
+      if (windowSum == C)
+        return true;
+      l++;
+      h++;
+    }
+    return false;
+  }
 }
