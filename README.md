@@ -7,6 +7,14 @@ Complete DSA
 - Equlibrium Array
 - Stocks sell and buy
 - Print the Anit-diagoanl
+- Reverse sentence
+- longest palindromic subsrtring
+- Length of longest consecutive ones
+- Row to Column Zero
+- Majority Element
+- Check anagrams
+- N/3 Repeat Number
+- Colorful Number
 
 # Note :
 

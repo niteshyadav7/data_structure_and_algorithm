@@ -53,12 +53,15 @@ public class Main {
     // System.out.println(SubArray.allSubArraySum(arr));
     // int arr[] = { 4, 3, 2, 6, 1 };
     // System.out.println(SubArray.slidingSubArrayExist(arr, 3, 11));
-    int arr[][] = { { 1, 2 }, { 3, 4 } };
+    // int arr[][] = { { 1, 2 }, { 3, 4 } };
     // System.out.println((multi_dim_array.mainDiagonalSum(arr)));
     // System.out.println(multi_dim_array.antiDiagonal(arr));
-    System.out.println(Arrays.deepToString(arr));
+    // System.out.println(Arrays.deepToString(arr));
     // multi_dim_array.transpose(arr);
-    multi_dim_array.rotateArray(arr);
-    System.out.println(Arrays.deepToString(arr));
+    // multi_dim_array.rotateArray(arr);
+    // System.out.println(Arrays.deepToString(arr));
+    String str = "Hello";
+    // System.out.println(strings.toggleLetter(str));
+    System.out.println(strings.reverseString(str));
   }
 }
