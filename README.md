@@ -15,6 +15,8 @@ Complete DSA
 - Check anagrams
 - N/3 Repeat Number
 - Colorful Number
+- Beggar Problem
+- Rain Water Trapping
 
 # Note :
 
