@@ -2,6 +2,25 @@
 
 Complete DSA
 
+# Primary DSA
+* Arrays and Strings
+* Bit Manipulation
+* Recursion & Backtraking
+* Maths
+* Hashing 
+* Sorting
+* Binary Search 
+* Two Pointers
+* LinkedList
+  
+# Secondary DSA
+* Stacks and Queues
+* Trees
+* Heaps
+* Greedy 
+* DP
+* graphs
+
 # Must Do
 
 - Equlibrium Array
