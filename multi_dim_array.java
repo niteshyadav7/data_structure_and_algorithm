@@ -122,5 +122,15 @@ public class multi_dim_array {
       }
     }
   }
+  // Problem 1: check into sorted matrix x exist or not
+  // Problem 2: check int row wise matrix 1's and 0's.
+  // Problem 3; Print the rectangle of the matrix
+  //Algorithm::
+  /**
+   * first upper part : for this iterate form j=0 to j=N-1
+   * for right side part :for this iterate from i=1 to i=N-2
+   * for base part :for this iterate from j=N-1 to j=0
+   * for side part : for this iterate form i=N-2 to i=1
+   */
 
 }

@@ -17,6 +17,11 @@ Complete DSA
 - Colorful Number
 - Beggar Problem
 - Rain Water Trapping
+- Spiral Print
+- Find x in sorted matrix
+- sorting Bubble sort, Insertion sort, Selection sort, count sort,merge sort
+-
+
 
 # Note :
 
