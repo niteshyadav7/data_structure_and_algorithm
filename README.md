@@ -39,7 +39,8 @@ Complete DSA
 - Spiral Print
 - Find x in sorted matrix
 - sorting Bubble sort, Insertion sort, Selection sort, count sort,merge sort
--
+- quick sort and comparator problems
+
 
 
 # Note :
