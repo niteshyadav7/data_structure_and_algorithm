@@ -79,4 +79,51 @@ public class BasicLL {
     }
     return prev;
   }
+
+  public static boolean checkPalindromeLL(Node head) {
+    /**
+     * ALgo: first find the length then find middle ,then
+     * if length is even then take middle length/2.
+     * if length is odd then take middle (length+1)/2.
+     */
+    int length = BasicLL.sizeLL(head);
+    int mid = length / 2;
+    Node temp = head;
+    for (int i = 0; i < mid; i++) {
+      temp = temp.next;
+    }
+    Node reversed = BasicLL.reverseLL(temp);
+    Node first = head;
+    while (first != null && reversed != null) {
+      if (first.data != reversed.data)
+        return false;
+      reversed = reversed.next;
+      first = first.next;
+    }
+    // BasicLL.printLL(reversed);
+    return true;
+  }
+
+  public static Node deleteFromLastLL(Node head, int pos) {
+    Node rev = BasicLL.reverseLL(head);
+    Node temp = rev;
+    for (int i = 1; i < pos - 1; i++) {
+      temp = temp.next;
+    }
+    Node joiner = temp.next.next;
+    temp.next = joiner;
+    return BasicLL.reverseLL(rev);
+  }
+
+  public static Node removeDuplicates(Node head) {
+    Node temp = head;
+    while (temp != null&&temp.next!=null) {
+      if ( temp.data == temp.next.data) {
+        temp.next = temp.next.next;
+      } else {
+        temp = temp.next;
+      }
+    }
+    return head;
+  }
 }

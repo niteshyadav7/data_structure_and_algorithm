@@ -40,7 +40,8 @@ Complete DSA
 - Find x in sorted matrix
 - sorting Bubble sort, Insertion sort, Selection sort, count sort,merge sort
 - quick sort and comparator problems
-
+- Reverse linkedList Variation Problems
+- 
 
 
 # Note :
