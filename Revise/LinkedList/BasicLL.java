@@ -1,27 +1,60 @@
+/**
+ * BasicLL
+ */
 public class BasicLL {
-  public static void printLL(Node x1) {
-    Node temp = x1;
+
+  /**
+   * Note: Whenever you apply any types of operation firstly store that variable
+   * above , so that no error .
+   * 
+   * 
+   * @param head
+   * @return
+   */
+
+  // find the length of LinkedList
+  public static int sizeLL(Node head) {
+    int count = 0;
+    Node temp = head;
     while (temp != null) {
-      System.out.print(temp.data + " ");
+      count++;
+      temp = temp.next;
+    }
+    return count;
+  }
+
+  public static void printLL(Node head) {
+    Node temp = head;
+    while (temp != null) {
+      if (temp.next == null) {
+        System.out.print(temp.data);
+      } else {
+        System.out.print(temp.data + "->");
+      }
       temp = temp.next;
     }
     System.out.println();
   }
 
-  public static int countSizeLL(Node head) {
+  public static Node deleteLL(Node head, int pos) {
     Node temp = head;
-    int counter = 0;
-    while (temp != null) {
-      counter++;
+    if (pos == 1) {
+      temp = temp.next;
+      head = temp;
+      return head;
+    }
+    for (int i = 1; i < pos - 1; i++) {
       temp = temp.next;
     }
-    return counter;
+    Node joiner = temp.next.next;
+    temp.next = joiner;
+    return head;
   }
 
-  public static Node insertLL(Node head, int data, int pos) {
+  public static Node insertLL(Node head, int pos, int data) {
     Node temp = head;
     Node nn = new Node(data);
-    if (pos == 0) {
+    if (pos == 1) {
       nn.next = temp;
       head = nn;
       return head;
@@ -29,33 +62,21 @@ public class BasicLL {
     for (int i = 1; i < pos - 1; i++) {
       temp = temp.next;
     }
-    Node kPos = temp.next;
+    Node joiner = temp.next;
     temp.next = nn;
-    nn.next = kPos;
+    nn.next = joiner;
     return head;
   }
 
-  public static Node deleteLL(Node head, int pos) {
-    Node temp = head;
-    if (pos == 0) {
-      return head.next;
+  public static Node reverseLL(Node head) {
+    Node curr = head;
+    Node prev = null;
+    while (curr != null) {
+      Node currNext = curr.next;
+      curr.next = prev;
+      prev = curr;
+      curr = currNext;
     }
-    for (int i = 1; i < pos - 1; i++) {
-      temp = temp.next;
-    }
-    Node nxt = temp.next.next;
-    temp.next = nxt;
-    return head;
+    return prev;
   }
-  /**
-   * let's say you want to insert at pos k=3 [1,2,3,newNode,4,5]
-   * firstly go to K-1
-   * 
-   */
-  // for (int i = 1; i <= pos - 1; i++) {
-  // temp = temp.next;
-  // }
-  // temp.next = newData;
-  // newData.next = temp.next;
-  // return head;
 }

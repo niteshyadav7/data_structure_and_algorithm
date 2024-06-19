@@ -11,9 +11,14 @@ public class Main {
     x3.next = x4;
     x4.next = x5;
 
-    BasicLL.printLL(x1);
+    // BasicLL.printLL(x1);
     // System.out.println(BasicLL.insertLL(x1, 100, 0));
     // BasicLL.printLL(BasicLL.insertLL(x1, 100, 3));
-    BasicLL.printLL(BasicLL.deleteLL(x1, 0));
+    // BasicLL.printLL(BasicLL.reverseLL(x1));
+    // System.out.println("Size of the linkedList is " + BasicLL.sizeLL(x1));
+    BasicLL.printLL(x1);
+    // BasicLL.printLL(BasicLL.insertLL(x1, 3,100));
+    BasicLL.printLL(BasicLL.reverseLL(x1));
+
   }
 }
