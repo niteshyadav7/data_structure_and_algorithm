@@ -117,8 +117,8 @@ public class BasicLL {
 
   public static Node removeDuplicates(Node head) {
     Node temp = head;
-    while (temp != null&&temp.next!=null) {
-      if ( temp.data == temp.next.data) {
+    while (temp != null && temp.next != null) {
+      if (temp.data == temp.next.data) {
         temp.next = temp.next.next;
       } else {
         temp = temp.next;
@@ -126,4 +126,15 @@ public class BasicLL {
     }
     return head;
   }
+
+  public static int middleLL(Node head) {
+    Node fast = head;
+    Node slow = head;
+    while (fast.next != null && fast.next.next != null) {
+      slow = slow.next;
+      fast = fast.next.next;
+    }
+    return slow.data;
+  }
+
 }
