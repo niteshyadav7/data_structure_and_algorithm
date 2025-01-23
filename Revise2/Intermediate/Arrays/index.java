@@ -82,12 +82,29 @@ public class index {
     return count;
   }
 
+  public static int equlibrium(int A[]) {
+    for (int i = 0; i < A.length; i++) {
+      int lower = 0;
+      for (int j = 0; j < i; j++) {
+        lower += A[j];
+      }
+      int higher = 0;
+      for (int j = i + 1; j < A.length; j++) {
+        higher += A[j];
+      }
+      System.out.println(lower + " " + higher);
+    }
+    return -1;
+  }
+
   public static void main(String[] args) {
     // int A[] = { 2, 2, 2 };
     // int B[][] = { { 0, 0 }, { 1, 2 } };
     // int ans[] = querySum(A, B);
     // System.out.println(Arrays.toString(ans));
-    int A[] = { 1, 1, 1 };
-    System.out.println(countSpecailIndex(A));
+    // int A[] = { 1, 1, 1 };
+    // System.out.println(countSpecailIndex(A));
+    int A[] = { -7, 1, 5, 2, -4, 3, 0 };
+    System.out.println(equlibrium(A));
   }
 }
